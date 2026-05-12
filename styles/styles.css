@@ -80,7 +80,7 @@ img {
 }
 
 .hero__title {
-  font-family: "Archivo Black", arial, sans-serif;
+  font-family: "Archivo Black", Arial, sans-serif;
   font-size: 72px;
   line-height: 1.2;
   margin: 0;
@@ -133,4 +133,27 @@ img {
   object-fit: cover;
   position: relative;
   z-index: 1;
+}
+
+.skills {
+  padding-top: 110px;
+}
+
+.skills__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skills__logo {
+  width: 50px;
+  height: auto;
+}
+
+.section-title {
+  font-family: "Archivo Black", Arial, sans-serif;
+  font-size: 40px;
+  line-height: 1.1;
+  margin: 0;
+  margin-bottom: 50px;
 }
