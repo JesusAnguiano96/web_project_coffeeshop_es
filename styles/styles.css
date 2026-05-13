@@ -23,7 +23,6 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
   background-color: #111;
   color: white;
-  overflow-x: hidden;
 }
 
 ul {
@@ -46,6 +45,21 @@ img {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 120px;
+  background:
+  /* Hero glow */
+    radial-gradient(
+      circle 600px at 75% 400px,
+      rgba(109, 109, 255, 0.35) 0%,
+      rgba(109, 109, 255, 0.15) 35%,
+      rgba(109, 109, 255, 0) 70%
+    ),
+    /* Contact glow */
+    radial-gradient(
+        circle 450px at 50% calc(100% - 190px),
+        rgba(109, 109, 255, 0.35) 0%,
+        rgba(109, 109, 255, 0.15) 35%,
+        rgba(109, 109, 255, 0) 70%
+      );
 }
 
 .hero__container {
@@ -67,22 +81,6 @@ img {
 
 .hero__image {
   padding-top: 40px;
-  position: relative;
-}
-
-.hero__image::before {
-  content: "";
-  position: absolute;
-  width: 800px;
-  height: 800px;
-  left: -200px;
-  bottom: -200px;
-  background: radial-gradient(
-    circle,
-    rgba(108, 99, 255, 0.45),
-    transparent 65%
-  );
-  z-index: -1;
 }
 
 .hero__title {
@@ -118,19 +116,8 @@ img {
 
 .hero__link {
   display: inline-block;
-  position: relative;
   color: white;
   padding-bottom: 5px;
-}
-
-.hero__link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 5px;
-  background: linear-gradient(to right, #3a2b7a, #6c63ff);
 }
 
 .hero__photo {
@@ -260,32 +247,8 @@ img {
 .contact {
   padding-top: 100px;
   padding-bottom: 100px;
-  background: radial-gradient(
-    circle,
-    rgba(109, 109, 255, 0.35) 0%,
-    rgba(109, 109, 255, 0.15) 35%,
-    rgba(109, 109, 255, 0) 70%
-  );
 }
 
-/* .contact::before {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(
-    circle,
-    rgba(109, 109, 255, 0.35) 0%,
-    rgba(109, 109, 255, 0.15) 35%,
-    rgba(109, 109, 255, 0) 70%
-  );
-  z-index: -1;
-}
- */
 .contact__container {
   display: flex;
   flex-direction: column;
@@ -337,6 +300,21 @@ img {
 @media screen and (max-width: 768px) {
   .main {
     padding: 0 40px;
+    background:
+  /* Hero glow */
+      radial-gradient(
+        circle 600px at 75% 200px,
+        rgba(109, 109, 255, 0.35) 0%,
+        rgba(109, 109, 255, 0.15) 35%,
+        rgba(109, 109, 255, 0) 70%
+      ),
+      /* Contact glow */
+        radial-gradient(
+          circle 600px at 50% calc(100% - 190px),
+          rgba(109, 109, 255, 0.35) 0%,
+          rgba(109, 109, 255, 0.15) 35%,
+          rgba(109, 109, 255, 0) 70%
+        );
   }
 
   .hero__photo {
@@ -390,12 +368,5 @@ img {
   .contact {
     padding-top: 80px;
     padding-bottom: 102px;
-  }
-
-  .hero__image::before {
-    width: 400px;
-    height: 400px;
-    left: -120px;
-    bottom: -120px;
   }
 }
