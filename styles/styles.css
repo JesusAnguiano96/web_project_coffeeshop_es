@@ -23,6 +23,7 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
   background-color: #111;
   color: white;
+  overflow-x: hidden;
 }
 
 ul {
@@ -57,6 +58,11 @@ img {
   padding-top: 89px;
   display: flex;
   flex-direction: column;
+}
+
+.hero__content,
+.hero__image {
+  min-width: 0;
 }
 
 .hero__image {
@@ -254,8 +260,32 @@ img {
 .contact {
   padding-top: 100px;
   padding-bottom: 100px;
+  background: radial-gradient(
+    circle,
+    rgba(109, 109, 255, 0.35) 0%,
+    rgba(109, 109, 255, 0.15) 35%,
+    rgba(109, 109, 255, 0) 70%
+  );
 }
 
+/* .contact::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(109, 109, 255, 0.35) 0%,
+    rgba(109, 109, 255, 0.15) 35%,
+    rgba(109, 109, 255, 0) 70%
+  );
+  z-index: -1;
+}
+ */
 .contact__container {
   display: flex;
   flex-direction: column;
@@ -294,4 +324,78 @@ img {
 .contact__link:hover,
 .contact__description:hover {
   opacity: 0.5;
+}
+
+.hero__subtitle-separator {
+  display: inline;
+}
+
+.hero__subtitle-tech {
+  display: inline;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 0 40px;
+  }
+
+  .hero__photo {
+    width: 216px;
+    height: 280px;
+  }
+
+  .hero__content {
+    padding-top: 40px;
+  }
+
+  .hero__image {
+    padding-top: 40px;
+  }
+
+  .hero__title {
+    font-size: 58px;
+    line-height: 1.1;
+  }
+
+  .hero__subtitle {
+    line-height: 1.4;
+  }
+
+  .hero__subtitle-separator {
+    display: none;
+  }
+
+  .hero__subtitle-tech {
+    display: block;
+  }
+
+  .skills {
+    padding-top: 80px;
+  }
+
+  .section-title {
+    margin-bottom: 44px;
+  }
+
+  .projects {
+    padding-top: 80px;
+  }
+
+  .projects__item {
+    flex-basis: 100%;
+  }
+  .project-card__content {
+    min-height: unset;
+  }
+  .contact {
+    padding-top: 80px;
+    padding-bottom: 102px;
+  }
+
+  .hero__image::before {
+    width: 400px;
+    height: 400px;
+    left: -120px;
+    bottom: -120px;
+  }
 }
