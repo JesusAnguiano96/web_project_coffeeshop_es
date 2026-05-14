@@ -116,8 +116,19 @@ img {
 
 .hero__link {
   display: inline-block;
+  position: relative;
   color: white;
   padding-bottom: 5px;
+}
+
+.hero__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #3a2b7a, #6c63ff);
 }
 
 .hero__photo {
@@ -270,11 +281,6 @@ img {
   gap: 80px;
 }
 
-.contact__icon {
-  width: 40px;
-  height: 40px;
-}
-
 .hero__link,
 .project-card__link,
 .contact__link,
@@ -368,5 +374,116 @@ img {
   .contact {
     padding-top: 80px;
     padding-bottom: 102px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .main {
+    padding: 20px 20px 0;
+    background:
+      /* Hero glow */
+      radial-gradient(
+        circle 900px at 50% 160px,
+        rgba(109, 109, 255, 0.35) 0%,
+        rgba(109, 109, 255, 0.15) 35%,
+        rgba(109, 109, 255, 0) 70%
+      ),
+      /* Contact glow */
+        radial-gradient(
+          circle 600px at 50% calc(100% - 190px),
+          rgba(109, 109, 255, 0.35) 0%,
+          rgba(109, 109, 255, 0.15) 35%,
+          rgba(109, 109, 255, 0) 70%
+        );
+  }
+  .hero__container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .hero__content {
+    padding-top: 0;
+  }
+  .hero__image {
+    order: -1;
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+  .hero__photo {
+    width: 100%;
+    height: 280px;
+  }
+  .hero__title {
+    font-size: 36px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .hero__subtitle {
+    font-size: 16px;
+    line-height: 1.375;
+    margin-bottom: 20px;
+  }
+  .hero__description {
+    font-size: 16px;
+    line-height: 1.375;
+    margin-bottom: 30px;
+  }
+  .hero__links {
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+  }
+  .skills {
+    padding-top: 60px;
+  }
+  .section-title {
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+  .skills__list {
+    display: grid;
+    grid-template-columns: repeat(4, 30px);
+    justify-content: space-between;
+    row-gap: 30px;
+  }
+  .skills__logo {
+    width: 30px;
+    height: auto;
+  }
+  .projects {
+    padding-top: 59.8px;
+  }
+  .project-card__image-container {
+    height: 160px;
+  }
+  .project-card__tech-logo {
+    width: 20px;
+    height: 20px;
+  }
+  .project-card__tech-list {
+    gap: 5px;
+  }
+  .project-card__content {
+    padding: 20px;
+  }
+  .project-card__title {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+  .project-card__description {
+    font-size: 16px;
+    line-height: 1.375;
+    margin-bottom: 20px;
+  }
+  .project-card__link {
+    font-size: 14px;
+  }
+  .contact {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+  .contact__links {
+    gap: 40px;
   }
 }
