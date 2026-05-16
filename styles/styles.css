@@ -7,6 +7,14 @@
 }
 
 @font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Archivo Black";
   src: url("../fonts/ArchivoBlack-Regular.woff2") format("woff2");
   font-weight: 400;
@@ -182,7 +190,8 @@ img {
 
 .project-card__image-container {
   position: relative;
-  height: 330px;
+  aspect-ratio: 16 / 9;
+  height: auto;
 }
 
 .project-card__image {
@@ -303,7 +312,7 @@ img {
   display: inline;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   .main {
     padding: 0 40px;
     background:
@@ -377,7 +386,7 @@ img {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 767px) {
   .main {
     padding: 20px 20px 0;
     background:
@@ -407,6 +416,8 @@ img {
     order: -1;
     padding-top: 0;
     padding-bottom: 30px;
+    width: 100%;
+    max-width: 280px;
   }
   .hero__photo {
     width: 100%;
@@ -454,7 +465,8 @@ img {
     padding-top: 59.8px;
   }
   .project-card__image-container {
-    height: 160px;
+    aspect-ratio: 16 / 9;
+    height: auto;
   }
   .project-card__tech-logo {
     width: 20px;
@@ -485,5 +497,9 @@ img {
   }
   .contact__links {
     gap: 40px;
+  }
+  .contact__link-icon {
+    width: 24px;
+    height: 24px;
   }
 }
